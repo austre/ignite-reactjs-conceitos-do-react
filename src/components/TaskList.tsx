@@ -35,14 +35,17 @@ export function TaskList() {
   function handleToggleTaskCompletion(id: number) {
     // Altere entre `true` ou `false` o campo `isComplete` de uma task com dado ID
 
-    /*const newTasks=tasks.map(task=>task.id==id?{
+    /*Este código foi baseado no vídeo de solução do desafio, tendo em vista que o criado por mim colocava
+      a Task Completed para o fim da listagem.*/
+    const newTasks=tasks.map(task=>task.id==id?{
       ...task,
       isComplete:!task.isComplete
     }:task);
 
-    setTasks(newTasks);*/
+    setTasks(newTasks);
 
-    const [taskToChange]=tasks.filter(obj => {
+    /*Código original criado e que coloca a Task Completed no final da listagem.*/
+    /*const [taskToChange]=tasks.filter(obj => {
       return obj.id === id
     });
 
@@ -56,7 +59,7 @@ export function TaskList() {
       isComplete:taskToChange.isComplete ? false:true,
     };
 
-    setTasks([...tasksList,newTask]);
+    setTasks([...tasksList,newTask]);*/
   }
 
   function handleRemoveTask(id: number) {
